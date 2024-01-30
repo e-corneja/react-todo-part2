@@ -4,15 +4,7 @@ import './footer.css'
 
 import TasksFilter from '../tasks-filter'
 
-function Footer({
-  items,
-
-  onClearCompleted,
-  filterBy,
-  onFilterAll,
-  onFilterActive,
-  onFilterCompleted,
-}) {
+function Footer({ items, onClearCompleted, filterBy, onFilterAll, onFilterActive, onFilterCompleted }) {
   const numChecked = items.filter((item) => !item.checked).length
 
   return (
