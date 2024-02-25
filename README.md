@@ -1,4 +1,4 @@
-# REACT-TODO-APP
+# TIMER in REACT TODO
 
 First project React Course
 
