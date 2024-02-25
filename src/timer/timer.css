@@ -1,0 +1,48 @@
+.timer {
+  color: rgba(0, 0, 0, 0.5);
+  width: 80px;
+  font-size: 13px;
+}
+
+.timer-icon {
+  width: 30px;
+  height: 40px;
+  font-size: 18px;
+  color: #cc9a9a;
+  margin: auto 0;
+  transition: color 0.2s ease-out;
+  cursor: pointer;
+}
+
+.timer-icon:hover {
+  color: #be676a;
+}
+
+.icon-pause,
+.icon-play {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon-play {
+  font-size: 15px;
+}
+
+.icon-play:after {
+  content: '▶';
+}
+
+.icon-pause:after {
+  content: '⏸';
+}
+
+.minutes {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.seconds {
+  font-size: 14px;
+}

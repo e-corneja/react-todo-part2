@@ -11,9 +11,21 @@ import './app.css'
 export default function App() {
   const [items, setItems] = useState([])
   const [filterBy, setfilterBy] = useState('all')
+  const [tasksTime, setTasksTime] = useState({})
 
   function handleAddItems(item) {
     setItems((items) => [...items, item])
+    setTasksTime((prev) => ({
+      ...prev,
+      [item.id]: { minutes: item.minutes, seconds: item.seconds },
+    }))
+  }
+
+  function updateTaskTime(id, minutes, seconds) {
+    setTasksTime((prev) => ({
+      ...prev,
+      [id]: { minutes, seconds },
+    }))
   }
 
   function handleDeleteItem(id) {
@@ -62,6 +74,8 @@ export default function App() {
         onDeleteItem={handleDeleteItem}
         onEditItem={handleEditItem}
         onToggleItem={handleToggleItem}
+        tasksTime={tasksTime}
+        updateTaskTime={updateTaskTime}
       />
       <Footer
         items={items}
